@@ -66,6 +66,25 @@
         }
     </style>
 </head>
+<script>
+async function sendEmail() {
+    const email = document.getElementById("email").value;
+
+    const response = await fetch(
+        "https://email-backend.onrender.com/send-email",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email })
+        }
+    );
+
+    const result = await response.json();
+    alert(result.message);
+}
+</script>
 <body>
 
     <div class="form-container">
@@ -81,7 +100,7 @@
             <label>CC</label>
             <input type="email" name="cc" placeholder="Enter CC email">
 
-            <button type="submit">Send Email</button>
+            <button onclick="sendEmail()">Send Email</button>
         </form>
     </div>
 
