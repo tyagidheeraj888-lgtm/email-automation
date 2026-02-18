@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send PDF Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            width: 380px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Send PDF via Email</h2>
+
+        <form method="post">
+            <label>Receiver Name</label>
+            <input type="text" name="name" placeholder="Enter receiver name" required>
+
+            <label>Email ID</label>
+            <input type="email" name="email" placeholder="Enter email address" required>
+
+            <label>CC</label>
+            <input type="email" name="cc" placeholder="Enter CC email">
+
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
