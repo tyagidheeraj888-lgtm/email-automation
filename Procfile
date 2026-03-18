@@ -1,1 +1,1 @@
-web: gunicorn email_app:app
+web: gunicorn email_app:app --bind 0.0.0.0:$PORT
