@@ -68,16 +68,17 @@
 </head>
 <script>
 async function sendEmail() {
+    const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-
+    const cc = document.getElementById("cc").value;
     const response = await fetch(
-        "https://email-automation-2-xvgb.onrender.com",
+        "https://email-automation-2-xvgb.onrender.com/",
         {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ email })
+            body: JSON.stringify({name, email, cc })
         }
     );
 
