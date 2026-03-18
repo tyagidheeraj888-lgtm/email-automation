@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request        #python -m flask --app email_app run
 import smtplib
 from email.message import EmailMessage
+from flask import Flask, render_template, request
+from flask_cors import CORS   # add this
 
 from dotenv import load_dotenv
 import os
@@ -11,7 +13,7 @@ GMAIL_ID = os.getenv("GMAIL_ID")
 GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 
 app = Flask(__name__)
-
+CORS(app)   # enable CORS
 
 @app.route("/", methods=["GET", "POST"])
 def send_email():

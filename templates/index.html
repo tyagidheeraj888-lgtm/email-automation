@@ -71,7 +71,7 @@ async function sendEmail() {
     const email = document.getElementById("email").value;
 
     const response = await fetch(
-        "https://email-backend.onrender.com/send-email",
+        "https://email-automation-2-xvgb.onrender.com",
         {
             method: "POST",
             headers: {
@@ -92,15 +92,15 @@ async function sendEmail() {
 
         <form method="post">
             <label>Receiver Name</label>
-            <input type="text" name="name" placeholder="Enter receiver name" required>
+            <input type="text" name="name" id="name" placeholder="Enter receiver name" required>
 
             <label>Email ID</label>
-            <input type="email" name="email" placeholder="Enter email address" required>
+            <input type="email" name="email" id="email" placeholder="Enter email address" required>
 
             <label>CC</label>
-            <input type="email" name="cc" placeholder="Enter CC email">
+            <input type="email" name="cc" id="cc" placeholder="Enter CC email">
 
-            <button onclick="sendEmail()">Send Email</button>
+            <button type="button" onclick="sendEmail()">Send Email</button>
         </form>
     </div>
 
